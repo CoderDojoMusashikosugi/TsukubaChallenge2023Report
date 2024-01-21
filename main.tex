@@ -214,7 +214,7 @@ Windows PC& HP& 開発・デバッグ環境\\
 今回初出場ということもあり、できるだけ現場経験値を積むためつくばチャレンジEXにも参加することにした。特につくばチャレンジ with PLATEAUは地図データの活用の点で過去の蓄積のない自分たちにとっても得るものが大きいと考え挑戦することとした。
 
 \subsection{PLATEAUデータの変換}
-G空間情報センターのPLATEAUつくば市データ\cite{pltsukuba}をダウンロードし、PLATEAU SDK for Unity\cite{plateau_unity}を使ってOBJデータを作成、その後PCL mesh2pcd\cite{pcl_mesh2pcd}を使いOBJから点群データに変換した後で座標の不整合をCooud Compareというツールで修正してROS用の点群地図ファイルを作成した。当初つくばチャレンジEX with PLATEAUのチュートリアル\cite{tcexpl}を参考にFMEというデータ変換ソフトウェアを利用しようとしたが、ライセンスの取得に時間がかかることが分かったため使用できなかった。Unity上では不要なデータを細かいオブジェクト単位で編集・削除することができるため、結果的にはロボット視点で不要なデータをすべて削除することができ、必要最低限のデータセットを構築することができた。
+G空間情報センターのPLATEAUつくば市データ\cite{pltsukuba}をダウンロードし、PLATEAU SDK for Unity\cite{plateau_unity}を使ってOBJデータを作成、その後PCL mesh2pcd\cite{pcl_mesh2pcd}を使いOBJから点群データに変換した後で座標の不整合をCloud Compareというツールで修正してROS用の点群地図ファイルを作成した。当初つくばチャレンジEX with PLATEAUのチュートリアル\cite{tcexpl}を参考にFMEというデータ変換ソフトウェアを利用しようとしたが、ライセンスの取得に時間がかかることが分かったため使用できなかった。Unity上では不要なデータを細かいオブジェクト単位で編集・削除することができるため、結果的にはロボット視点で不要なデータをすべて削除することができ、必要最低限のデータセットを構築することができた。
 \begin{figure}
     \centering
     \includegraphics[width=0.8\linewidth]{picture/plateau_unity.png}
